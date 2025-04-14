@@ -1233,6 +1233,30 @@
 		if (waterptr_aer(n,itype) .ge. p1st)   &
 		    rsub(waterptr_aer(n,itype),k1:k2,1) =   &
 		    chem(it,kt1:kt2,jt,waterptr_aer(n,itype))/factaerwater
+        if (lptr_dtpm25_aer(n,itype,iphase) .ge. p1st)   &
+            rsub(lptr_dtpm25_aer(n,itype,iphase),k1:k2,1) =   &
+            chem(it,kt1:kt2,jt,lptr_dtpm25_aer(n,itype,iphase))/factaerbc
+        if (lptr_dtpm10_aer(n,itype,iphase) .ge. p1st)   &
+            rsub(lptr_dtpm10_aer(n,itype,iphase),k1:k2,1) =   &
+            chem(it,kt1:kt2,jt,lptr_dtpm10_aer(n,itype,iphase))/factaerbc
+        if (lptr_dnpm25_aer(n,itype,iphase) .ge. p1st)   &
+            rsub(lptr_dnpm25_aer(n,itype,iphase),k1:k2,1) =   &
+            chem(it,kt1:kt2,jt,lptr_dnpm25_aer(n,itype,iphase))/factaeroin
+        if (lptr_dnpm10_aer(n,itype,iphase) .ge. p1st)   &
+            rsub(lptr_dnpm10_aer(n,itype,iphase),k1:k2,1) =   &
+            chem(it,kt1:kt2,jt,lptr_dnpm10_aer(n,itype,iphase))/factaeroin
+        if (lptr_bwpm25_aer(n,itype,iphase) .ge. p1st)   &
+            rsub(lptr_bwpm25_aer(n,itype,iphase),k1:k2,1) =   &
+            chem(it,kt1:kt2,jt,lptr_bwpm25_aer(n,itype,iphase))/factaeroin
+        if (lptr_bwpm10_aer(n,itype,iphase) .ge. p1st)   &
+            rsub(lptr_bwpm10_aer(n,itype,iphase),k1:k2,1) =   &
+            chem(it,kt1:kt2,jt,lptr_bwpm10_aer(n,itype,iphase))/factaeroin
+        if (lptr_twpm25_aer(n,itype,iphase) .ge. p1st)   &
+            rsub(lptr_twpm25_aer(n,itype,iphase),k1:k2,1) =   &
+            chem(it,kt1:kt2,jt,lptr_twpm25_aer(n,itype,iphase))/factaeroin
+        if (lptr_twpm10_aer(n,itype,iphase) .ge. p1st)   &
+            rsub(lptr_twpm10_aer(n,itype,iphase),k1:k2,1) =   &
+            chem(it,kt1:kt2,jt,lptr_twpm10_aer(n,itype,iphase))/factaeroin
                 if (lptr_pcg1_b_c_aer(n,itype,iphase) .ge. p1st)   &
                     rsub(lptr_pcg1_b_c_aer(n,itype,iphase),k1:k2,1) =   &
                     chem(it,kt1:kt2,jt,lptr_pcg1_b_c_aer(n,itype,iphase))/factaerpcg1_b_c
@@ -1980,6 +2004,30 @@
 		if (waterptr_aer(n,itype) .ge. p1st)   &
 		    chem(it,kt1:kt2,jt,waterptr_aer(n,itype)) =   &
 		    rsub(waterptr_aer(n,itype),k1:k2,1)*factaerwater
+        if (lptr_dtpm25_aer(n,itype,iphase) .ge. p1st)   &
+            chem(it,kt1:kt2,jt,lptr_dtpm25_aer(n,itype,iphase)) =   &
+            rsub(lptr_dtpm25_aer(n,itype,iphase),k1:k2,1)*factaerbc
+        if (lptr_dtpm10_aer(n,itype,iphase) .ge. p1st)   &
+            chem(it,kt1:kt2,jt,lptr_dtpm10_aer(n,itype,iphase)) =   &
+            rsub(lptr_dtpm10_aer(n,itype,iphase),k1:k2,1)*factaerbc
+        if (lptr_dnpm25_aer(n,itype,iphase) .ge. p1st)   &
+            chem(it,kt1:kt2,jt,lptr_dnpm25_aer(n,itype,iphase)) =   &
+            rsub(lptr_dnpm25_aer(n,itype,iphase),k1:k2,1)*factaerbc
+        if (lptr_dnpm10_aer(n,itype,iphase) .ge. p1st)   &
+            chem(it,kt1:kt2,jt,lptr_dnpm10_aer(n,itype,iphase)) =   &
+            rsub(lptr_dnpm10_aer(n,itype,iphase),k1:k2,1)*factaerbc
+        if (lptr_bwpm25_aer(n,itype,iphase) .ge. p1st)   &
+            chem(it,kt1:kt2,jt,lptr_bwpm25_aer(n,itype,iphase)) =   &
+            rsub(lptr_bwpm25_aer(n,itype,iphase),k1:k2,1)*factaeroin
+        if (lptr_bwpm10_aer(n,itype,iphase) .ge. p1st)   &
+            chem(it,kt1:kt2,jt,lptr_bwpm10_aer(n,itype,iphase)) =   &
+            rsub(lptr_bwpm10_aer(n,itype,iphase),k1:k2,1)*factaeroin
+        if (lptr_twpm25_aer(n,itype,iphase) .ge. p1st)   &
+            chem(it,kt1:kt2,jt,lptr_twpm25_aer(n,itype,iphase)) =   &
+            rsub(lptr_twpm25_aer(n,itype,iphase),k1:k2,1)*factaeroin
+        if (lptr_twpm10_aer(n,itype,iphase) .ge. p1st)   &
+            chem(it,kt1:kt2,jt,lptr_twpm10_aer(n,itype,iphase)) =   &
+            rsub(lptr_twpm10_aer(n,itype,iphase),k1:k2,1)*factaeroin
                 if (lptr_pcg1_b_c_aer(n,itype,iphase) .ge. p1st)   &
                     chem(it,kt1:kt2,jt,lptr_pcg1_b_c_aer(n,itype,iphase)) =   &
                     rsub(lptr_pcg1_b_c_aer(n,itype,iphase),k1:k2,1)*factaerpcg1_b_c
@@ -2504,7 +2552,7 @@ n2o5_flag = config_flags%n2o5_hetchem
 !   set master aerosol chemical types
 !
 !	ntot_mastercomp_aer = 96
-	ntot_mastercomp_aer = 111
+	ntot_mastercomp_aer = 119
 
 	l = 1
 	mastercompindx_so4_aer = l
@@ -3284,6 +3332,62 @@ n2o5_flag = config_flags%n2o5_hetchem
         mw_mastercomp_aer(   l ) =    mw_bsoa4_aer
         hygro_mastercomp_aer(l ) = hygro_bsoa4_aer
 
+        l = 112
+        mastercompindx_dtpm25_aer = l
+        name_mastercomp_aer( l ) = 'dtpm25'
+        dens_mastercomp_aer( l ) =  dens_bc_aer
+        mw_mastercomp_aer(   l ) =    mw_bc_aer
+        hygro_mastercomp_aer(l ) = hygro_bc_aer
+        
+        l = 113
+        mastercompindx_dtpm10_aer = l
+        name_mastercomp_aer( l ) = 'dtpm10'
+        dens_mastercomp_aer( l ) =  dens_bc_aer
+        mw_mastercomp_aer(   l ) =    mw_bc_aer
+        hygro_mastercomp_aer(l ) = hygro_bc_aer
+        
+        l = 114
+        mastercompindx_dnpm25_aer = l
+        name_mastercomp_aer( l ) = 'dnpm25'
+        dens_mastercomp_aer( l ) =  dens_oin_aer
+        mw_mastercomp_aer(   l ) =    mw_oin_aer
+        hygro_mastercomp_aer(l ) = hygro_oin_aer
+        
+        l = 115
+        mastercompindx_dnpm10_aer = l
+        name_mastercomp_aer( l ) = 'dnpm10'
+        dens_mastercomp_aer( l ) =  dens_oin_aer
+        mw_mastercomp_aer(   l ) =    mw_oin_aer
+        hygro_mastercomp_aer(l ) = hygro_oin_aer
+        
+        l = 116
+        mastercompindx_bwpm25_aer = l
+        name_mastercomp_aer( l ) = 'bwpm25'
+        dens_mastercomp_aer( l ) =  dens_oin_aer
+        mw_mastercomp_aer(   l ) =    mw_oin_aer
+        hygro_mastercomp_aer(l ) = hygro_oin_aer
+        
+        l = 117
+        mastercompindx_bwpm10_aer = l
+        name_mastercomp_aer( l ) = 'bwpm10'
+        dens_mastercomp_aer( l ) =  dens_oin_aer
+        mw_mastercomp_aer(   l ) =    mw_oin_aer
+        hygro_mastercomp_aer(l ) = hygro_oin_aer
+        
+        l = 118
+        mastercompindx_twpm25_aer = l
+        name_mastercomp_aer( l ) = 'twpm25'
+        dens_mastercomp_aer( l ) =  dens_oin_aer
+        mw_mastercomp_aer(   l ) =    mw_oin_aer
+        hygro_mastercomp_aer(l ) = hygro_oin_aer
+        
+        l = 119
+        mastercompindx_twpm10_aer = l
+        name_mastercomp_aer( l ) = 'twpm10'
+        dens_mastercomp_aer( l ) =  dens_oin_aer
+        mw_mastercomp_aer(   l ) =    mw_oin_aer
+        hygro_mastercomp_aer(l ) = hygro_oin_aer
+
 !
 !   set section size arrays
 !
@@ -3394,7 +3498,8 @@ n2o5_flag = config_flags%n2o5_hetchem
 
 	integer y_so4, y_no3, y_cl, y_msa, y_co3, y_nh4, y_na,   &
 		y_ca, y_oin, y_oc, y_bc, y_hysw, y_water, &
-                y_num, &
+        y_num, y_dtpm25, y_dtpm10, y_dnpm25, y_dnpm10, &
+        y_bwpm25, y_bwpm10, y_twpm25, y_twpm10, &
       y_pcg1_b_c,y_pcg2_b_c,y_pcg3_b_c,y_pcg4_b_c, &
       y_pcg5_b_c,y_pcg6_b_c,y_pcg7_b_c,y_pcg8_b_c, &
       y_pcg9_b_c,y_pcg1_b_o,y_pcg2_b_o,y_pcg3_b_o, &
@@ -3450,6 +3555,14 @@ n2o5_flag = config_flags%n2o5_hetchem
 	hyswptr_aer(:,itype)    = 1
 	waterptr_aer(:,itype)        = 1
 	numptr_aer(:,itype,:)        = 1
+    lptr_dtpm25_aer(:,itype,:)  = 1
+    lptr_dtpm10_aer(:,itype,:)  = 1
+    lptr_dnpm25_aer(:,itype,:)  = 1
+    lptr_dnpm10_aer(:,itype,:)  = 1
+    lptr_bwpm25_aer(:,itype,:)  = 1
+    lptr_bwpm10_aer(:,itype,:)  = 1
+    lptr_twpm25_aer(:,itype,:)  = 1
+    lptr_twpm10_aer(:,itype,:)  = 1
         lptr_pcg1_b_c_aer(:,itype,:)      = 1
         lptr_pcg2_b_c_aer(:,itype,:)      = 1
         lptr_pcg3_b_c_aer(:,itype,:)      = 1
@@ -3568,6 +3681,14 @@ n2o5_flag = config_flags%n2o5_hetchem
 	if (p_bc_a01 .ge. p1st) lptr_bc_aer(01,itype,ai_phase)  = p_bc_a01
 	if (p_hysw_a01 .ge. p1st) hyswptr_aer(01,itype)         = p_hysw_a01
 	if (p_water_a01 .ge. p1st) waterptr_aer(01,itype)       = p_water_a01
+    if (p_dtpm25_a01 .ge. p1st) lptr_dtpm25_aer(01,itype,ai_phase) = p_dtpm25_a01
+    if (p_dtpm10_a01 .ge. p1st) lptr_dtpm10_aer(01,itype,ai_phase) = p_dtpm10_a01
+    if (p_dnpm25_a01 .ge. p1st) lptr_dnpm25_aer(01,itype,ai_phase) = p_dnpm25_a01
+    if (p_dnpm10_a01 .ge. p1st) lptr_dnpm10_aer(01,itype,ai_phase) = p_dnpm10_a01
+    if (p_bwpm25_a01 .ge. p1st) lptr_bwpm25_aer(01,itype,ai_phase) = p_bwpm25_a01
+    if (p_bwpm10_a01 .ge. p1st) lptr_bwpm10_aer(01,itype,ai_phase) = p_bwpm10_a01
+    if (p_twpm25_a01 .ge. p1st) lptr_twpm25_aer(01,itype,ai_phase) = p_twpm25_a01
+    if (p_twpm10_a01 .ge. p1st) lptr_twpm10_aer(01,itype,ai_phase) = p_twpm10_a01
         if (p_pcg1_b_c_a01 .ge. p1st) lptr_pcg1_b_c_aer(01,itype,ai_phase) = p_pcg1_b_c_a01
         if (p_pcg2_b_c_a01 .ge. p1st) lptr_pcg2_b_c_aer(01,itype,ai_phase)  = p_pcg2_b_c_a01
         if (p_pcg3_b_c_a01 .ge. p1st) lptr_pcg3_b_c_aer(01,itype,ai_phase)  = p_pcg3_b_c_a01
@@ -3686,6 +3807,14 @@ n2o5_flag = config_flags%n2o5_hetchem
         if (p_bc_a02 .ge. p1st) lptr_bc_aer(02,itype,ai_phase)  = p_bc_a02
         if (p_hysw_a02 .ge. p1st) hyswptr_aer(02,itype)         = p_hysw_a02
         if (p_water_a02 .ge. p1st) waterptr_aer(02,itype)       = p_water_a02
+        if (p_dtpm25_a02 .ge. p1st) lptr_dtpm25_aer(02,itype,ai_phase) = p_dtpm25_a02
+        if (p_dtpm10_a02 .ge. p1st) lptr_dtpm10_aer(02,itype,ai_phase) = p_dtpm10_a02
+        if (p_dnpm25_a02 .ge. p1st) lptr_dnpm25_aer(02,itype,ai_phase) = p_dnpm25_a02
+        if (p_dnpm10_a02 .ge. p1st) lptr_dnpm10_aer(02,itype,ai_phase) = p_dnpm10_a02
+        if (p_bwpm25_a02 .ge. p1st) lptr_bwpm25_aer(02,itype,ai_phase) = p_bwpm25_a02
+        if (p_bwpm10_a02 .ge. p1st) lptr_bwpm10_aer(02,itype,ai_phase) = p_bwpm10_a02
+        if (p_twpm25_a02 .ge. p1st) lptr_twpm25_aer(02,itype,ai_phase) = p_twpm25_a02
+        if (p_twpm10_a02 .ge. p1st) lptr_twpm10_aer(02,itype,ai_phase) = p_twpm10_a02
         if (p_pcg1_b_c_a02 .ge. p1st) lptr_pcg1_b_c_aer(02,itype,ai_phase) = p_pcg1_b_c_a02
         if (p_pcg2_b_c_a02 .ge. p1st) lptr_pcg2_b_c_aer(02,itype,ai_phase)  = p_pcg2_b_c_a02
         if (p_pcg3_b_c_a02 .ge. p1st) lptr_pcg3_b_c_aer(02,itype,ai_phase)  = p_pcg3_b_c_a02
@@ -3804,6 +3933,14 @@ n2o5_flag = config_flags%n2o5_hetchem
         if (p_bc_a03 .ge. p1st) lptr_bc_aer(03,itype,ai_phase)  = p_bc_a03
         if (p_hysw_a03 .ge. p1st) hyswptr_aer(03,itype)         = p_hysw_a03
         if (p_water_a03 .ge. p1st) waterptr_aer(03,itype)       = p_water_a03
+        if (p_dtpm25_a03 .ge. p1st) lptr_dtpm25_aer(03,itype,ai_phase) = p_dtpm25_a03
+        if (p_dtpm10_a03 .ge. p1st) lptr_dtpm10_aer(03,itype,ai_phase) = p_dtpm10_a03
+        if (p_dnpm25_a03 .ge. p1st) lptr_dnpm25_aer(03,itype,ai_phase) = p_dnpm25_a03
+        if (p_dnpm10_a03 .ge. p1st) lptr_dnpm10_aer(03,itype,ai_phase) = p_dnpm10_a03
+        if (p_bwpm25_a03 .ge. p1st) lptr_bwpm25_aer(03,itype,ai_phase) = p_bwpm25_a03
+        if (p_bwpm10_a03 .ge. p1st) lptr_bwpm10_aer(03,itype,ai_phase) = p_bwpm10_a03
+        if (p_twpm25_a03 .ge. p1st) lptr_twpm25_aer(03,itype,ai_phase) = p_twpm25_a03
+        if (p_twpm10_a03 .ge. p1st) lptr_twpm10_aer(03,itype,ai_phase) = p_twpm10_a03
         if (p_pcg1_b_c_a03 .ge. p1st) lptr_pcg1_b_c_aer(03,itype,ai_phase) = p_pcg1_b_c_a03
         if (p_pcg2_b_c_a03 .ge. p1st) lptr_pcg2_b_c_aer(03,itype,ai_phase)  = p_pcg2_b_c_a03
         if (p_pcg3_b_c_a03 .ge. p1st) lptr_pcg3_b_c_aer(03,itype,ai_phase)  = p_pcg3_b_c_a03
@@ -3923,6 +4060,14 @@ n2o5_flag = config_flags%n2o5_hetchem
         if (p_bc_a04 .ge. p1st) lptr_bc_aer(04,itype,ai_phase)  = p_bc_a04
         if (p_hysw_a04 .ge. p1st) hyswptr_aer(04,itype)         = p_hysw_a04
         if (p_water_a04 .ge. p1st) waterptr_aer(04,itype)       = p_water_a04
+        if (p_dtpm25_a04 .ge. p1st) lptr_dtpm25_aer(04,itype,ai_phase) = p_dtpm25_a04
+        if (p_dtpm10_a04 .ge. p1st) lptr_dtpm10_aer(04,itype,ai_phase) = p_dtpm10_a04
+        if (p_dnpm25_a04 .ge. p1st) lptr_dnpm25_aer(04,itype,ai_phase) = p_dnpm25_a04
+        if (p_dnpm10_a04 .ge. p1st) lptr_dnpm10_aer(04,itype,ai_phase) = p_dnpm10_a04
+        if (p_bwpm25_a04 .ge. p1st) lptr_bwpm25_aer(04,itype,ai_phase) = p_bwpm25_a04
+        if (p_bwpm10_a04 .ge. p1st) lptr_bwpm10_aer(04,itype,ai_phase) = p_bwpm10_a04
+        if (p_twpm25_a04 .ge. p1st) lptr_twpm25_aer(04,itype,ai_phase) = p_twpm25_a04
+        if (p_twpm10_a04 .ge. p1st) lptr_twpm10_aer(04,itype,ai_phase) = p_twpm10_a04
         if (p_pcg1_b_c_a04 .ge. p1st) lptr_pcg1_b_c_aer(04,itype,ai_phase) = p_pcg1_b_c_a04
         if (p_pcg2_b_c_a04 .ge. p1st) lptr_pcg2_b_c_aer(04,itype,ai_phase)  = p_pcg2_b_c_a04
         if (p_pcg3_b_c_a04 .ge. p1st) lptr_pcg3_b_c_aer(04,itype,ai_phase)  = p_pcg3_b_c_a04
@@ -4042,7 +4187,14 @@ n2o5_flag = config_flags%n2o5_hetchem
 	    lptr_bc_aer(05,itype,ai_phase)       = p_bc_a05
 	    hyswptr_aer(05,itype)                = p_hysw_a05
 	    waterptr_aer(05,itype)               = p_water_a05
-
+        lptr_dtpm25_aer(05,itype,ai_phase) = p_dtpm25_a05
+        lptr_dtpm10_aer(05,itype,ai_phase) = p_dtpm10_a05
+        lptr_dnpm25_aer(05,itype,ai_phase) = p_dnpm25_a05
+        lptr_dnpm10_aer(05,itype,ai_phase) = p_dnpm10_a05
+        lptr_bwpm25_aer(05,itype,ai_phase) = p_bwpm25_a05
+        lptr_bwpm10_aer(05,itype,ai_phase) = p_bwpm10_a05
+        lptr_twpm25_aer(05,itype,ai_phase) = p_twpm25_a05
+        lptr_twpm10_aer(05,itype,ai_phase) = p_twpm10_a05
             if (p_pcg1_b_c_a05 .ge. p1st) lptr_pcg1_b_c_aer(05,itype,ai_phase) = p_pcg1_b_c_a05
             if (p_pcg2_b_c_a05 .ge. p1st) lptr_pcg2_b_c_aer(05,itype,ai_phase)  = p_pcg2_b_c_a05
             if (p_pcg3_b_c_a05 .ge. p1st) lptr_pcg3_b_c_aer(05,itype,ai_phase)  = p_pcg3_b_c_a05
@@ -4145,7 +4297,14 @@ n2o5_flag = config_flags%n2o5_hetchem
 	    lptr_bc_aer(06,itype,ai_phase)       = p_bc_a06
 	    hyswptr_aer(06,itype)                = p_hysw_a06
 	    waterptr_aer(06,itype)               = p_water_a06
-
+        lptr_dtpm25_aer(06,itype,ai_phase) = p_dtpm25_a06
+        lptr_dtpm10_aer(06,itype,ai_phase) = p_dtpm10_a06
+        lptr_dnpm25_aer(06,itype,ai_phase) = p_dnpm25_a06
+        lptr_dnpm10_aer(06,itype,ai_phase) = p_dnpm10_a06
+        lptr_bwpm25_aer(06,itype,ai_phase) = p_bwpm25_a06
+        lptr_bwpm10_aer(06,itype,ai_phase) = p_bwpm10_a06
+        lptr_twpm25_aer(06,itype,ai_phase) = p_twpm25_a06
+        lptr_twpm10_aer(06,itype,ai_phase) = p_twpm10_a06
             if (p_pcg1_b_c_a06 .ge. p1st) lptr_pcg1_b_c_aer(06,itype,ai_phase) = p_pcg1_b_c_a06
             if (p_pcg2_b_c_a06 .ge. p1st) lptr_pcg2_b_c_aer(06,itype,ai_phase)  = p_pcg2_b_c_a06
             if (p_pcg3_b_c_a06 .ge. p1st) lptr_pcg3_b_c_aer(06,itype,ai_phase)  = p_pcg3_b_c_a06
@@ -4248,7 +4407,14 @@ n2o5_flag = config_flags%n2o5_hetchem
 	    lptr_bc_aer(07,itype,ai_phase)       = p_bc_a07
 	    hyswptr_aer(07,itype)                = p_hysw_a07
 	    waterptr_aer(07,itype)               = p_water_a07
-
+        lptr_dtpm25_aer(07,itype,ai_phase) = p_dtpm25_a07
+        lptr_dtpm10_aer(07,itype,ai_phase) = p_dtpm10_a07
+        lptr_dnpm25_aer(07,itype,ai_phase) = p_dnpm25_a07
+        lptr_dnpm10_aer(07,itype,ai_phase) = p_dnpm10_a07
+        lptr_bwpm25_aer(07,itype,ai_phase) = p_bwpm25_a07
+        lptr_bwpm10_aer(07,itype,ai_phase) = p_bwpm10_a07
+        lptr_twpm25_aer(07,itype,ai_phase) = p_twpm25_a07
+        lptr_twpm10_aer(07,itype,ai_phase) = p_twpm10_a07
             if (p_pcg1_b_c_a07 .ge. p1st) lptr_pcg1_b_c_aer(07,itype,ai_phase) = p_pcg1_b_c_a07
             if (p_pcg2_b_c_a07 .ge. p1st) lptr_pcg2_b_c_aer(07,itype,ai_phase)  = p_pcg2_b_c_a07
             if (p_pcg3_b_c_a07 .ge. p1st) lptr_pcg3_b_c_aer(07,itype,ai_phase)  = p_pcg3_b_c_a07
@@ -4351,7 +4517,14 @@ n2o5_flag = config_flags%n2o5_hetchem
 	    lptr_bc_aer(08,itype,ai_phase)       = p_bc_a08
 	    hyswptr_aer(08,itype)                = p_hysw_a08
 	    waterptr_aer(08,itype)               = p_water_a08
-
+        lptr_dtpm25_aer(08,itype,ai_phase) = p_dtpm25_a08
+        lptr_dtpm10_aer(08,itype,ai_phase) = p_dtpm10_a08
+        lptr_dnpm25_aer(08,itype,ai_phase) = p_dnpm25_a08
+        lptr_dnpm10_aer(08,itype,ai_phase) = p_dnpm10_a08
+        lptr_bwpm25_aer(08,itype,ai_phase) = p_bwpm25_a08
+        lptr_bwpm10_aer(08,itype,ai_phase) = p_bwpm10_a08
+        lptr_twpm25_aer(08,itype,ai_phase) = p_twpm25_a08
+        lptr_twpm10_aer(08,itype,ai_phase) = p_twpm10_a08
             if (p_pcg1_b_c_a08 .ge. p1st) lptr_pcg1_b_c_aer(08,itype,ai_phase) = p_pcg1_b_c_a08
             if (p_pcg2_b_c_a08 .ge. p1st) lptr_pcg2_b_c_aer(08,itype,ai_phase)  = p_pcg2_b_c_a08
             if (p_pcg3_b_c_a08 .ge. p1st) lptr_pcg3_b_c_aer(08,itype,ai_phase)  = p_pcg3_b_c_a08
@@ -4896,6 +5069,53 @@ n2o5_flag = config_flags%n2o5_hetchem
 	    spectxt = 'bc_'
 	    nspectxt = 3
 
+    else if (l_mastercomp .eq. mastercompindx_dtpm25_aer) then
+	    lptr_dum = lptr_dtpm25_aer(n,itype,iphase)
+	    mcindx_dum = mastercompindx_dtpm25_aer
+	    spectxt = 'dtpm25_'
+	    nspectxt = 3
+
+    else if (l_mastercomp .eq. mastercompindx_dtpm10_aer) then
+	    lptr_dum = lptr_dtpm10_aer(n,itype,iphase)
+	    mcindx_dum = mastercompindx_dtpm10_aer
+	    spectxt = 'dtpm10_'
+	    nspectxt = 3
+
+	else if (l_mastercomp .eq. mastercompindx_dnpm25_aer) then
+	    lptr_dum = lptr_dnpm25_aer(n,itype,iphase)
+	    mcindx_dum = mastercompindx_dnpm25_aer
+	    spectxt = 'dnpm25_'
+	    nspectxt = 4
+
+    else if (l_mastercomp .eq. mastercompindx_dnpm10_aer) then
+	    lptr_dum = lptr_dnpm10_aer(n,itype,iphase)
+	    mcindx_dum = mastercompindx_dnpm10_aer
+	    spectxt = 'dnpm10_'
+	    nspectxt = 4
+
+    else if (l_mastercomp .eq. mastercompindx_bwpm25_aer) then
+	    lptr_dum = lptr_bwpm25_aer(n,itype,iphase)
+	    mcindx_dum = mastercompindx_bwpm25_aer
+	    spectxt = 'bwpm25_'
+	    nspectxt = 4
+
+    else if (l_mastercomp .eq. mastercompindx_bwpm10_aer) then
+	    lptr_dum = lptr_bwpm10_aer(n,itype,iphase)
+	    mcindx_dum = mastercompindx_bwpm10_aer
+	    spectxt = 'bwpm10_'
+	    nspectxt = 4
+
+    else if (l_mastercomp .eq. mastercompindx_twpm25_aer) then
+	    lptr_dum = lptr_twpm25_aer(n,itype,iphase)
+	    mcindx_dum = mastercompindx_twpm25_aer
+	    spectxt = 'twpm25_'
+	    nspectxt = 4
+
+    else if (l_mastercomp .eq. mastercompindx_twpm10_aer) then
+	    lptr_dum = lptr_twpm10_aer(n,itype,iphase)
+	    mcindx_dum = mastercompindx_twpm10_aer
+	    spectxt = 'twpm10_'
+	    nspectxt = 4
 
         else if (l_mastercomp .eq. mastercompindx_pcg1_b_c_aer) then
             lptr_dum = lptr_pcg1_b_c_aer(n,itype,iphase)
@@ -5647,7 +5867,32 @@ n2o5_flag = config_flags%n2o5_hetchem
 	write(msg,9350) 'numptr_aer     ',   &
 		(numptr_aer(n,itype,iphase), n=1,nsize_aer(itype))
 	call peg_message( lunout, msg )
-	
+	write(msg,9350) 'lptr_dtpm25_aer ',   &
+        (lptr_dtpm25_aer(n,itype,iphase), n=1,nsize_aer(itype))
+    call peg_message( lunout, msg )
+    write(msg,9350) 'lptr_dtpm10_aer ',   &
+        (lptr_dtpm10_aer(n,itype,iphase), n=1,nsize_aer(itype))
+    call peg_message( lunout, msg )
+    write(msg,9350) 'lptr_dnpm25_aer ',   &
+        (lptr_dnpm25_aer(n,itype,iphase), n=1,nsize_aer(itype))
+    call peg_message( lunout, msg )
+    write(msg,9350) 'lptr_dnpm10_aer ',   &
+        (lptr_dnpm10_aer(n,itype,iphase), n=1,nsize_aer(itype))
+    call peg_message( lunout, msg )
+    write(msg,9350) 'lptr_bwpm25_aer ',   &
+        (lptr_bwpm25_aer(n,itype,iphase), n=1,nsize_aer(itype))
+    call peg_message( lunout, msg )
+    write(msg,9350) 'lptr_bwpm10_aer ',   &
+        (lptr_bwpm10_aer(n,itype,iphase), n=1,nsize_aer(itype))
+    call peg_message( lunout, msg )
+    write(msg,9350) 'lptr_twpm25_aer ',   &
+        (lptr_twpm25_aer(n,itype,iphase), n=1,nsize_aer(itype))
+    call peg_message( lunout, msg )
+    write(msg,9350) 'lptr_twpm10_aer ',   &
+        (lptr_twpm10_aer(n,itype,iphase), n=1,nsize_aer(itype))
+    call peg_message( lunout, msg )
+
+
 ! for all "write(msg)..." lines below: added missing CALL peg_message to actually write out the message
         write(msg,9350) 'lptr_pcg1_b_c_aer ',   &
                 (lptr_pcg1_b_c_aer(n,itype,iphase), n=1,nsize_aer(itype))
@@ -5989,6 +6234,14 @@ n2o5_flag = config_flags%n2o5_hetchem
 	y_hysw = 0
 	y_water = 0
 	y_num = 0
+    y_dtpm25 = 0
+    y_dtpm10 = 0
+    y_dnpm25 = 0
+    y_dnpm10 = 0
+    y_bwpm25 = 0
+    y_bwpm10 = 0
+    y_twpm25 = 0
+    y_twpm10 = 0
         y_pcg1_b_c=0
         y_pcg2_b_c=0
         y_pcg3_b_c=0
@@ -6108,6 +6361,14 @@ n2o5_flag = config_flags%n2o5_hetchem
 	    if (hyswptr_aer(n,itype)    .ge. p1st) y_hysw = y_hysw + 1
 	    if (waterptr_aer(n,itype)        .ge. p1st) y_water = y_water + 1
 	    if (numptr_aer(n,itype,iphase)   .ge. p1st) y_num = y_num + 1
+        if (lptr_dtpm25_aer(n,itype,iphase) .ge. p1st) y_dtpm25 = y_dtpm25 + 1
+        if (lptr_dtpm10_aer(n,itype,iphase) .ge. p1st) y_dtpm10 = y_dtpm10 + 1
+        if (lptr_dnpm25_aer(n,itype,iphase) .ge. p1st) y_dnpm25 = y_dnpm25 + 1
+        if (lptr_dnpm10_aer(n,itype,iphase) .ge. p1st) y_dnpm10 = y_dnpm10 + 1
+        if (lptr_bwpm25_aer(n,itype,iphase) .ge. p1st) y_bwpm25 = y_bwpm25 + 1
+        if (lptr_bwpm10_aer(n,itype,iphase) .ge. p1st) y_bwpm10 = y_bwpm10 + 1
+        if (lptr_twpm25_aer(n,itype,iphase) .ge. p1st) y_twpm25 = y_twpm25 + 1
+        if (lptr_twpm10_aer(n,itype,iphase) .ge. p1st) y_twpm10 = y_twpm10 + 1
             if (lptr_pcg1_b_c_aer(n,itype,iphase) .ge. p1st) y_pcg1_b_c = y_pcg1_b_c + 1
             if (lptr_pcg2_b_c_aer(n,itype,iphase) .ge. p1st) y_pcg2_b_c = y_pcg2_b_c + 1
             if (lptr_pcg3_b_c_aer(n,itype,iphase) .ge. p1st) y_pcg3_b_c = y_pcg3_b_c + 1
@@ -7690,6 +7951,10 @@ n2o5_flag = config_flags%n2o5_hetchem
       		lptr_na_aer(n,itype,iphase),   lptr_ca_aer(n,itype,iphase),   &
       		lptr_oin_aer(n,itype,iphase),  lptr_oc_aer(n,itype,iphase),   &
       		lptr_bc_aer(n,itype,iphase),   hyswptr_aer(n,itype), &
+            lptr_dtpm25_aer(n,itype,iphase),   lptr_dtpm10_aer(n,itype,iphase),   &
+            lptr_dnpm25_aer(n,itype,iphase),   lptr_dnpm10_aer(n,itype,iphase),   &
+            lptr_bwpm25_aer(n,itype,iphase),   lptr_bwpm10_aer(n,itype,iphase),   &
+            lptr_twpm25_aer(n,itype,iphase),   lptr_twpm10_aer(n,itype,iphase),   &
                 lptr_pcg1_b_c_aer(n,itype,iphase),  lptr_pcg2_b_c_aer(n,itype,iphase),&
                 lptr_pcg3_b_c_aer(n,itype,iphase),  lptr_pcg4_b_c_aer(n,itype,iphase),&
                 lptr_pcg5_b_c_aer(n,itype,iphase),  lptr_pcg6_b_c_aer(n,itype,iphase),&

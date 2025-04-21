@@ -706,8 +706,10 @@
 	integer, save :: mastercompindx_bc_aer  = -999888777
     integer, save :: mastercompindx_dtpm25_aer  = -999888777
     integer, save :: mastercompindx_dtpm10_aer  = -999888777
-    integer, save :: mastercompindx_dnpm25_aer  = -999888777
-    integer, save :: mastercompindx_dnpm10_aer  = -999888777
+    integer, save :: mastercompindx_dbwpm25_aer  = -999888777
+    integer, save :: mastercompindx_dbwpm10_aer  = -999888777
+    integer, save :: mastercompindx_dtwpm25_aer  = -999888777
+    integer, save :: mastercompindx_dtwpm10_aer  = -999888777
     integer, save :: mastercompindx_bwpm25_aer  = -999888777
     integer, save :: mastercompindx_bwpm10_aer  = -999888777
     integer, save :: mastercompindx_twpm25_aer  = -999888777
@@ -833,8 +835,10 @@
       	  lptr_bc_aer(maxd_asize, maxd_atype, maxd_aphase),       &
           lptr_dtpm25_aer(maxd_asize, maxd_atype, maxd_aphase),   &
       	  lptr_dtpm10_aer(maxd_asize, maxd_atype, maxd_aphase),   &
-          lptr_dnpm25_aer(maxd_asize, maxd_atype, maxd_aphase),   &
-      	  lptr_dnpm10_aer(maxd_asize, maxd_atype, maxd_aphase),   &
+          lptr_dbwpm25_aer(maxd_asize, maxd_atype, maxd_aphase),   &
+      	  lptr_dbwpm10_aer(maxd_asize, maxd_atype, maxd_aphase),   &
+          lptr_dtwpm25_aer(maxd_asize, maxd_atype, maxd_aphase),   &
+      	  lptr_dtwpm10_aer(maxd_asize, maxd_atype, maxd_aphase),   &
       	  lptr_bwpm25_aer(maxd_asize, maxd_atype, maxd_aphase),   &
       	  lptr_bwpm10_aer(maxd_asize, maxd_atype, maxd_aphase),   &
           lptr_twpm25_aer(maxd_asize, maxd_atype, maxd_aphase),   &

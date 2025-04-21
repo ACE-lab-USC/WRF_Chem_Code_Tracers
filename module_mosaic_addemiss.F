@@ -114,8 +114,8 @@ CONTAINS
    real, parameter :: efact1 = 1.0
    real :: aem_so4, aem_no3, aem_cl, aem_msa, aem_co3, aem_nh4,   &
            aem_na, aem_ca, aem_oin, aem_oc, aem_bc, aem_num,      &
-           aem_dtpm25, aem_dtpm10, aem_dnpm25, aem_dnpm10,        &
-           aem_bwpm25, aem_bwpm10, aem_twpm25, aem_twpm10
+           aem_dtpm25, aem_dtpm10, aem_dbwpm25, aem_dtwpm25, aem_dbwpm10,  &
+           aem_dtwpm10, aem_bwpm25, aem_bwpm10, aem_twpm25, aem_twpm10
    real dum, fact
 
 
@@ -500,15 +500,25 @@ real, save :: fr8b_bburn_mosaic(8) = &
 	        + fr_aem_sorgam_i(n)*emis_ant(i,k,j,p_e_dtpm10i)   &
 	        + fr_aem_sorgam_j(n)*emis_ant(i,k,j,p_e_dtpm10j)
 
-            aem_dnpm25 = fr_aem_mosaic_f(n)*emis_ant(i,k,j,p_e_dnpm25j)   &
-	        + fr_aem_mosaic_c(n)*emis_ant(i,k,j,p_e_dnpm25c)   &
-	        + fr_aem_sorgam_i(n)*emis_ant(i,k,j,p_e_dnpm25i)   &
-	        + fr_aem_sorgam_j(n)*emis_ant(i,k,j,p_e_dnpm25j)  
+            aem_dbwpm25 = fr_aem_mosaic_f(n)*emis_ant(i,k,j,p_e_dbwpm25j)   &
+	        + fr_aem_mosaic_c(n)*emis_ant(i,k,j,p_e_dbwpm25c)   &
+	        + fr_aem_sorgam_i(n)*emis_ant(i,k,j,p_e_dbwpm25i)   &
+	        + fr_aem_sorgam_j(n)*emis_ant(i,k,j,p_e_dbwpm25j)
 
-            aem_dnpm10 = fr_aem_mosaic_f(n)*emis_ant(i,k,j,p_e_dnpm10j)   &
-	        + fr_aem_mosaic_c(n)*emis_ant(i,k,j,p_e_dnpm10c)   &
-	        + fr_aem_sorgam_i(n)*emis_ant(i,k,j,p_e_dnpm10i)   &
-	        + fr_aem_sorgam_j(n)*emis_ant(i,k,j,p_e_dnpm10j)
+            aem_dtwpm25 = fr_aem_mosaic_f(n)*emis_ant(i,k,j,p_e_dtwpm25j)   &
+	        + fr_aem_mosaic_c(n)*emis_ant(i,k,j,p_e_dtwpm25c)   &
+	        + fr_aem_sorgam_i(n)*emis_ant(i,k,j,p_e_dtwpm25i)   &
+	        + fr_aem_sorgam_j(n)*emis_ant(i,k,j,p_e_dtwpm25j)
+
+            aem_dbwpm10 = fr_aem_mosaic_f(n)*emis_ant(i,k,j,p_e_dbwpm10j)   &
+	        + fr_aem_mosaic_c(n)*emis_ant(i,k,j,p_e_dbwpm10c)   &
+	        + fr_aem_sorgam_i(n)*emis_ant(i,k,j,p_e_dbwpm10i)   &
+	        + fr_aem_sorgam_j(n)*emis_ant(i,k,j,p_e_dbwpm10j)
+
+            aem_dtwpm10 = fr_aem_mosaic_f(n)*emis_ant(i,k,j,p_e_dtwpm10j)   &
+	        + fr_aem_mosaic_c(n)*emis_ant(i,k,j,p_e_dtwpm10c)   &
+	        + fr_aem_sorgam_i(n)*emis_ant(i,k,j,p_e_dtwpm10i)   &
+	        + fr_aem_sorgam_j(n)*emis_ant(i,k,j,p_e_dtwpm10j)
 
             aem_bwpm25 = fr_aem_mosaic_f(n)*emis_ant(i,k,j,p_e_bwpm25j)   &
 	        + fr_aem_mosaic_c(n)*emis_ant(i,k,j,p_e_bwpm25c)   &
@@ -617,11 +627,17 @@ real, save :: fr8b_bburn_mosaic(8) = &
     l = lptr_dtpm10_aer(n,itype,iphase)
     if (l >= p1st) chem(i,k,j,l) = chem(i,k,j,l) + aem_dtpm10*fact
 
-    l = lptr_dnpm25_aer(n,itype,iphase)
-    if (l >= p1st) chem(i,k,j,l) = chem(i,k,j,l) + aem_dnpm25*fact
+    l = lptr_dbwpm25_aer(n,itype,iphase)
+    if (l >= p1st) chem(i,k,j,l) = chem(i,k,j,l) + aem_dbwpm25*fact
 
-    l = lptr_dnpm10_aer(n,itype,iphase)
-    if (l >= p1st) chem(i,k,j,l) = chem(i,k,j,l) + aem_dnpm10*fact
+    l = lptr_dbwpm10_aer(n,itype,iphase)
+    if (l >= p1st) chem(i,k,j,l) = chem(i,k,j,l) + aem_dbwpm10*fact
+
+    l = lptr_dtwpm25_aer(n,itype,iphase)
+    if (l >= p1st) chem(i,k,j,l) = chem(i,k,j,l) + aem_dtwpm25*fact
+
+    l = lptr_dtwpm10_aer(n,itype,iphase)
+    if (l >= p1st) chem(i,k,j,l) = chem(i,k,j,l) + aem_dtwpm10*fact
 
     l = lptr_bwpm25_aer(n,itype,iphase)
     if (l >= p1st) chem(i,k,j,l) = chem(i,k,j,l) + aem_bwpm25*fact

@@ -495,10 +495,10 @@ real, save :: fr8b_bburn_mosaic(8) = &
 	        + fr_aem_sorgam_i(n)*emis_ant(i,k,j,p_e_dtpm25i)   &
 	        + fr_aem_sorgam_j(n)*emis_ant(i,k,j,p_e_dtpm25j)  
 
-            aem_dtpm10 = fr_aem_mosaic_f(n)*emis_ant(i,k,j,p_e_dtpm10j)   &
+            aem_dtpm10 = fr_aem_mosaic_c(n)*emis_ant(i,k,j,p_e_dtpm10j)   &
 	        + fr_aem_mosaic_c(n)*emis_ant(i,k,j,p_e_dtpm10c)   &
-	        + fr_aem_sorgam_i(n)*emis_ant(i,k,j,p_e_dtpm10i)   &
-	        + fr_aem_sorgam_j(n)*emis_ant(i,k,j,p_e_dtpm10j)
+	        + fr_aem_sorgam_c(n)*emis_ant(i,k,j,p_e_dtpm10i)   &
+	        + fr_aem_sorgam_c(n)*emis_ant(i,k,j,p_e_dtpm10j)
 
             aem_dbwpm25 = fr_aem_mosaic_f(n)*emis_ant(i,k,j,p_e_dbwpm25j)   &
 	        + fr_aem_mosaic_c(n)*emis_ant(i,k,j,p_e_dbwpm25c)   &
@@ -510,35 +510,35 @@ real, save :: fr8b_bburn_mosaic(8) = &
 	        + fr_aem_sorgam_i(n)*emis_ant(i,k,j,p_e_dtwpm25i)   &
 	        + fr_aem_sorgam_j(n)*emis_ant(i,k,j,p_e_dtwpm25j)
 
-            aem_dbwpm10 = fr_aem_mosaic_f(n)*emis_ant(i,k,j,p_e_dbwpm10j)   &
+            aem_dbwpm10 = fr_aem_mosaic_c(n)*emis_ant(i,k,j,p_e_dbwpm10j)   &
 	        + fr_aem_mosaic_c(n)*emis_ant(i,k,j,p_e_dbwpm10c)   &
-	        + fr_aem_sorgam_i(n)*emis_ant(i,k,j,p_e_dbwpm10i)   &
-	        + fr_aem_sorgam_j(n)*emis_ant(i,k,j,p_e_dbwpm10j)
+	        + fr_aem_sorgam_c(n)*emis_ant(i,k,j,p_e_dbwpm10i)   &
+	        + fr_aem_sorgam_c(n)*emis_ant(i,k,j,p_e_dbwpm10j)
 
-            aem_dtwpm10 = fr_aem_mosaic_f(n)*emis_ant(i,k,j,p_e_dtwpm10j)   &
+            aem_dtwpm10 = fr_aem_mosaic_c(n)*emis_ant(i,k,j,p_e_dtwpm10j)   &
 	        + fr_aem_mosaic_c(n)*emis_ant(i,k,j,p_e_dtwpm10c)   &
-	        + fr_aem_sorgam_i(n)*emis_ant(i,k,j,p_e_dtwpm10i)   &
-	        + fr_aem_sorgam_j(n)*emis_ant(i,k,j,p_e_dtwpm10j)
+	        + fr_aem_sorgam_c(n)*emis_ant(i,k,j,p_e_dtwpm10i)   &
+	        + fr_aem_sorgam_c(n)*emis_ant(i,k,j,p_e_dtwpm10j)
 
             aem_bwpm25 = fr_aem_mosaic_f(n)*emis_ant(i,k,j,p_e_bwpm25j)   &
 	        + fr_aem_mosaic_c(n)*emis_ant(i,k,j,p_e_bwpm25c)   &
 	        + fr_aem_sorgam_i(n)*emis_ant(i,k,j,p_e_bwpm25i)   &
 	        + fr_aem_sorgam_j(n)*emis_ant(i,k,j,p_e_bwpm25j)
 
-            aem_bwpm10 = fr_aem_mosaic_f(n)*emis_ant(i,k,j,p_e_bwpm10j)   &
+            aem_bwpm10 = fr_aem_mosaic_c(n)*emis_ant(i,k,j,p_e_bwpm10j)   &
 	        + fr_aem_mosaic_c(n)*emis_ant(i,k,j,p_e_bwpm10c)   &
-	        + fr_aem_sorgam_i(n)*emis_ant(i,k,j,p_e_bwpm10i)   &
-	        + fr_aem_sorgam_j(n)*emis_ant(i,k,j,p_e_bwpm10j)
+	        + fr_aem_sorgam_c(n)*emis_ant(i,k,j,p_e_bwpm10i)   &
+	        + fr_aem_sorgam_c(n)*emis_ant(i,k,j,p_e_bwpm10j)
 
             aem_twpm25 = fr_aem_mosaic_f(n)*emis_ant(i,k,j,p_e_twpm25j)   &
 	        + fr_aem_mosaic_c(n)*emis_ant(i,k,j,p_e_twpm25c)   &
 	        + fr_aem_sorgam_i(n)*emis_ant(i,k,j,p_e_twpm25i)   &
 	        + fr_aem_sorgam_j(n)*emis_ant(i,k,j,p_e_twpm25j)
 
-            aem_twpm10 = fr_aem_mosaic_f(n)*emis_ant(i,k,j,p_e_twpm10j)   &
+            aem_twpm10 = fr_aem_mosaic_c(n)*emis_ant(i,k,j,p_e_twpm10j)   &
 	        + fr_aem_mosaic_c(n)*emis_ant(i,k,j,p_e_twpm10c)   &
-	        + fr_aem_sorgam_i(n)*emis_ant(i,k,j,p_e_twpm10i)   &
-	        + fr_aem_sorgam_j(n)*emis_ant(i,k,j,p_e_twpm10j)
+	        + fr_aem_sorgam_c(n)*emis_ant(i,k,j,p_e_twpm10i)   &
+	        + fr_aem_sorgam_c(n)*emis_ant(i,k,j,p_e_twpm10j)
 
 ! emissions for these species are currently zero
 	aem_nh4 = 0.0
